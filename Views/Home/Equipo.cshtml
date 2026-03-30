@@ -1,0 +1,96 @@
+﻿@model List<EmpresaMUDDUA.Models.IntegranteViewModel>
+@{
+    ViewData["Title"] = "Equipo";
+}
+
+<!-- ── HERO INTERIOR ─────────────────────────────────── -->
+<section class="inner-hero bg-light">
+    <div class="container text-center py-5">
+        <span class="section-tag">LAS PERSONAS DETRÁS</span>
+        <h1 class="fw-bold mt-2">Nuestro Equipo</h1>
+        <p class="text-muted mt-2">
+            Estudiantes de Tecnologías de la Información<br />
+            apasionados por crear software con propósito.
+        </p>
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                    <a asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active">Equipo</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+
+<!-- ── GRID DE INTEGRANTES ───────────────────────────── -->
+<!-- Los datos vienen del HomeController → Equipo()     -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+
+            @foreach (var (integrante, i) in Model.Select((m, idx) => (m, idx)))
+            {
+                <div class="col-sm-6 col-lg-4 fade-in" style="animation-delay:@(i * 80)ms">
+                    <div class="team-card h-100 text-center">
+
+                        <!-- Avatar con foto o ícono -->
+                        @if (!string.IsNullOrEmpty(integrante.Foto))
+                        {
+                            <img src="@integrante.Foto"
+                                 alt="@integrante.Nombre"
+                                 style="width:72px;height:72px;border-radius:12px;object-fit:cover;object-position:center;" />
+                        }
+                        else
+                        {
+                            <div class="card-icon @integrante.ColorClase mx-auto" style="width:72px;height:72px;font-size:2rem;">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                        }
+
+                        <!-- Nombre y rol -->
+                        <h5 class="fw-bold mt-3 mb-0">@integrante.Nombre</h5>
+                        <span class="role-badge mt-1">@integrante.Rol</span>
+
+                        <!-- Descripción -->
+                        <p class="text-muted small mt-2 px-2">@integrante.Descripcion</p>
+
+                        <!-- Redes sociales -->
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a href="@integrante.GitHub" class="social-icon" target="_blank" aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ── CTA ────────────────────────────────────────────── -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+                <span class="section-tag">COLABORA CON NOSOTROS</span>
+                <h2 class="fw-bold mt-1">¿Quieres ser parte de MUDDUA?</h2>
+                <p class="text-muted mt-2">
+                    Estamos siempre abiertos a colaborar con estudiantes y profesionales
+                    apasionados por la tecnología. Si tienes habilidades en desarrollo,
+                    diseño o gestión de proyectos, ¡nos encantaría conocerte!
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a asp-controller="Home" asp-action="Contacto"
+                   class="btn btn-primary btn-muddua">
+                    <i class="bi bi-envelope me-1"></i> Contáctanos
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

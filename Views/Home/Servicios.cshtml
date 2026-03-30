@@ -1,0 +1,198 @@
+﻿@{
+    ViewData["Title"] = "Servicios";
+}
+
+<!-- ── HERO INTERIOR ─────────────────────────────────── -->
+<section class="inner-hero bg-light">
+    <div class="container text-center py-5">
+        <span class="section-tag">LO QUE HACEMOS</span>
+        <h1 class="fw-bold mt-2">Nuestros Servicios</h1>
+        <p class="text-muted mt-2">
+            Soluciones de software a medida para cada tipo de proyecto digital.<br />
+            Del concepto a la entrega, estamos contigo en cada paso.
+        </p>
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                    <a asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active">Servicios</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+
+<!-- ── GRID DE SERVICIOS ──────────────────────────────── -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Desarrollo Web -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-design"><i class="bi bi-globe2"></i></div>
+                    <h5 class="fw-bold mt-3">Desarrollo Web</h5>
+                    <!-- ⚠️ REEMPLAZA con tu descripción real -->
+                    <p class="text-muted small mt-1">
+                        Diseñamos y construimos sitios web y aplicaciones web modernas,
+                        responsivas y de alto rendimiento con ASP.NET, HTML5 y JavaScript.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Páginas corporativas</li>
+                        <li>Sistemas de gestión web</li>
+                        <li>Portales administrativos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Apps Móviles -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-dev"><i class="bi bi-phone"></i></div>
+                    <h5 class="fw-bold mt-3">Apps Móviles</h5>
+                    <p class="text-muted small mt-1">
+                        Desarrollamos aplicaciones nativas y multiplataforma que ofrecen
+                        experiencias fluidas en cualquier dispositivo iOS o Android.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Apps interactivas</li>
+                        <li>Apps de gestión interna</li>
+                        <li>Integración con APIs</li>
+                        <li>Notificaciones push</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bases de Datos -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-util"><i class="bi bi-database-fill"></i></div>
+                    <h5 class="fw-bold mt-3">Bases de Datos</h5>
+                    <p class="text-muted small mt-1">
+                        Diseñamos, administramos y optimizamos bases de datos relacionales
+                        y no relacionales para garantizar rendimiento e integridad.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Modelado y normalización</li>
+                        <li>SQL Server / MySQL / Supabase / Firebase</li>
+                        <li>Migraciones de datos</li>
+                        <li>Optimización de consultas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Diseño UI/UX -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-grow"><i class="bi bi-layout-text-window-reverse"></i></div>
+                    <h5 class="fw-bold mt-3">Diseño UI/UX</h5>
+                    <p class="text-muted small mt-1">
+                        Creamos interfaces atractivas y funcionales con prototipos
+                        y flujos centrados en la usabilidad y experiencia del usuario.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Prototipado con Figma</li>
+                        <li>Wireframes y mockups</li>
+                        <li>Diseño responsivo</li>
+                        <li>Guías de estilo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sistemas Empresariales -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-design"><i class="bi bi-shield-lock"></i></div>
+                    <h5 class="fw-bold mt-3">Ciberseguridad & Datos</h5>
+                    <p class="text-muted small mt-1">
+                        Protegemos la integridad de tu información mediante auditorías 
+                        y protocolos de seguridad de alto estándar.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Auditorías de sistemas</li>
+                        <li>Protección contra intrusiones</li>
+                        <li>Cifrado de bases de datos</li>
+                        <li>Certificados de seguridad (SSL) </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Soporte Técnico -->
+            <div class="col-md-6 col-lg-4 fade-in">
+                <div class="service-card-full h-100">
+                    <div class="card-icon icon-dev"><i class="bi bi-headset"></i></div>
+                    <h5 class="fw-bold mt-3">Soporte Técnico</h5>
+                    <p class="text-muted small mt-1">
+                        Mantenimiento, corrección de errores y actualizaciones para
+                        que tu sistema siempre funcione al máximo rendimiento.
+                    </p>
+                    <ul class="service-list mt-3">
+                        <li>Mantenimiento preventivo</li>
+                        <li>Corrección de bugs</li>
+                        <li>Actualizaciones de versión</li>
+                        <li>Capacitación a usuarios</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ── PROCESO DE TRABAJO ─────────────────────────────── -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-tag">CÓMO TRABAJAMOS</span>
+            <h2 class="fw-bold mt-1">Nuestro Proceso</h2>
+            <p class="text-muted">Un flujo claro para asegurar el éxito de cada proyecto.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="process-card text-center h-100">
+                    <div class="process-num">01</div>
+                    <h6 class="fw-bold mt-3">Análisis</h6>
+                    <p class="text-muted small">Escuchamos tus necesidades y levantamos requerimientos detallados.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="process-card text-center h-100">
+                    <div class="process-num">02</div>
+                    <h6 class="fw-bold mt-3">Diseño</h6>
+                    <p class="text-muted small">Creamos mockups y prototipos para validar antes de escribir código.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="process-card text-center h-100">
+                    <div class="process-num">03</div>
+                    <h6 class="fw-bold mt-3">Desarrollo Ágil</h6>
+                    <p class="text-muted small">Sprints cortos con entregas parciales y retroalimentación continua.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="process-card text-center h-100">
+                    <div class="process-num">04</div>
+                    <h6 class="fw-bold mt-3">Entrega y Soporte</h6>
+                    <p class="text-muted small">Pruebas exhaustivas, lanzamiento y acompañamiento post-entrega.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ── CTA ────────────────────────────────────────────── -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">¿Listo para empezar?</h2>
+        <p class="text-white-50 mt-2">Contáctanos y recibe una propuesta personalizada sin costo.</p>
+        <a asp-controller="Home" asp-action="Contacto"
+           class="btn btn-primary btn-muddua mt-4">
+            <i class="bi bi-rocket-takeoff me-1"></i> Solicitar propuesta
+        </a>
+    </div>
+</section>

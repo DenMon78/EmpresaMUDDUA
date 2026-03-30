@@ -1,0 +1,703 @@
+﻿/* ═══════════════════════════════════════════════════
+   MUDDUA — Estilos principales
+   ═══════════════════════════════════════════════════ */
+
+/* ── Variables ──────────────────────────────────── */
+:root {
+    --azul: #2563EB;
+    --azul-dark: #1E40AF;
+    --azul-light: #DBEAFE;
+    --verde: #16A34A;
+    --verde-light: #DCFCE7;
+    --rojo: #DC2626;
+    --rojo-light: #FEE2E2;
+    --amarillo: #D97706;
+    --amarillo-l: #FEF3C7;
+    --oscuro: #0F172A;
+    --medio: #334155;
+    --muted: #64748B;
+    --borde: #E2E8F0;
+    --fondo: #F8FAFC;
+}
+
+/* ── Base ───────────────────────────────────────── */
+body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+    color: var(--oscuro);
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Helpers de sección ─────────────────────────── */
+.section-tag {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+/* ── Navbar ─────────────────────────────────────── */
+.logo-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--azul);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.logo-dot-sm {
+    width: 8px;
+    height: 8px;
+}
+
+.nav-pill-link {
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--medio) !important;
+    padding: 6px 14px !important;
+    border-radius: 8px;
+    transition: background .2s, color .2s;
+}
+
+    .nav-pill-link:hover,
+    .nav-pill-link.active {
+        background: var(--azul-light);
+        color: var(--azul) !important;
+    }
+
+/* ── Hero ───────────────────────────────────────── */
+.hero-section {
+    padding: 80px 0 60px;
+}
+
+.badge-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--verde);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--verde);
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .5;
+        transform: scale(1.5);
+    }
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+    .hero-title span {
+        color: var(--azul);
+    }
+
+.hero-img-wrap {
+    display: inline-block;
+}
+
+/* Stats hero */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--azul);
+    line-height: 1;
+}
+
+.stat-lbl {
+    font-size: .72rem;
+    color: var(--muted);
+    font-weight: 600;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.stat-sep {
+    width: 1px;
+    height: 36px;
+    background: var(--borde);
+}
+
+/* ── Cards de pilares ───────────────────────────── */
+.card {
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.1) !important;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+    }
+
+.card-design::before {
+    background: var(--azul);
+}
+
+.card-dev::before {
+    background: var(--verde);
+}
+
+.card-util::before {
+    background: var(--rojo);
+}
+
+.card-grow::before {
+    background: var(--amarillo);
+}
+
+/* Iconos */
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.icon-design {
+    background: var(--azul-light);
+    color: var(--azul);
+}
+
+.icon-dev {
+    background: var(--verde-light);
+    color: var(--verde);
+}
+
+.icon-util {
+    background: var(--rojo-light);
+    color: var(--rojo);
+}
+
+.icon-grow {
+    background: var(--amarillo-l);
+    color: var(--amarillo);
+}
+
+/* ── Botones ────────────────────────────────────── */
+.btn-primary {
+    background: var(--azul);
+    border: none;
+}
+
+    .btn-primary:hover {
+        background: var(--azul-dark);
+    }
+
+.btn-danger {
+    background: var(--rojo);
+    border: none;
+}
+
+    .btn-danger:hover {
+        background: #B91C1C;
+    }
+
+.btn-muddua {
+    border-radius: .6rem;
+    padding: .6rem 1.6rem;
+    font-weight: 600;
+}
+
+/* ── Value list (check list) ────────────────────── */
+.value-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.value-list i {
+    font-size: 1.1rem;
+}
+
+.value-image {
+    background: #EFF6FF;
+    padding: 20px;
+    border-radius: 1.5rem;
+}
+
+/* ── Tecnologías pills ──────────────────────────── */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tech-pill {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--medio);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    transition: all .2s ease;
+    cursor: default;
+}
+
+    .tech-pill i {
+        color: var(--azul);
+    }
+
+    .tech-pill:hover {
+        border-color: var(--azul);
+        color: var(--azul);
+        transform: translateY(-2px);
+    }
+
+/* ── Servicios (preview Index) ──────────────────── */
+.service-card {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 1.6rem;
+    transition: all .25s ease;
+}
+
+    .service-card:hover {
+        border-color: var(--azul);
+        box-shadow: 0 8px 24px rgba(37,99,235,.1);
+        transform: translateY(-4px);
+    }
+
+/* ── Servicios (cards completas) ────────────────── */
+.service-card-full {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all .25s ease;
+}
+
+    .service-card-full:hover {
+        border-color: var(--azul);
+        box-shadow: 0 10px 28px rgba(37,99,235,.1);
+        transform: translateY(-4px);
+    }
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--borde);
+    padding-top: .8rem;
+}
+
+    .service-list li {
+        font-size: .85rem;
+        color: var(--medio);
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .service-list li::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: var(--azul);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+/* ── Proceso (Servicios.cshtml) ─────────────────── */
+.process-card {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    transition: all .25s ease;
+}
+
+    .process-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        transform: translateY(-4px);
+    }
+
+.process-num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--azul-light);
+    letter-spacing: -.04em;
+    line-height: 1;
+}
+
+/* ── MVV (Nosotros.cshtml) ──────────────────────── */
+.mvv-card {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+    .mvv-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .values-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        padding: 7px 0;
+        font-size: .88rem;
+        color: var(--medio);
+        border-bottom: 1px solid var(--fondo);
+        line-height: 1.5;
+    }
+
+        .values-list li:last-child {
+            border-bottom: none;
+        }
+
+    .values-list i {
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+/* ── Objetivos (Nosotros.cshtml) ────────────────── */
+.goal-card {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    transition: all .25s ease;
+}
+
+    .goal-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,.08);
+        transform: translateY(-4px);
+    }
+
+.goal-num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--azul-light);
+    line-height: 1;
+}
+
+/* ── Equipo (Equipo.cshtml) ─────────────────────── */
+.team-card {
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    border-radius: 1.2rem;
+    padding: 2rem 1.5rem;
+    transition: all .25s ease;
+}
+
+    .team-card:hover {
+        box-shadow: 0 10px 28px rgba(0,0,0,.08);
+        transform: translateY(-5px);
+    }
+
+.role-badge {
+    display: inline-block;
+    background: var(--azul-light);
+    color: var(--azul);
+    font-size: .73rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 50px;
+}
+
+.social-icon {
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .95rem;
+    color: var(--medio);
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+    .social-icon:hover {
+        background: var(--azul);
+        color: #fff;
+        border-color: var(--azul);
+    }
+
+/* ── Contacto (Contacto.cshtml) ─────────────────── */
+.contact-form-card {
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    border-radius: 1.2rem;
+    padding: 2.5rem;
+}
+
+.form-control-muddua {
+    border: 1.5px solid var(--borde);
+    border-radius: .6rem;
+    padding: .65rem 1rem;
+    font-size: .93rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+    .form-control-muddua:focus {
+        border-color: var(--azul);
+        box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+        outline: none;
+    }
+
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+    .contact-info-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+.contact-label {
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+}
+
+.contact-value {
+    display: block;
+    font-weight: 600;
+    font-size: .93rem;
+    color: var(--oscuro);
+    text-decoration: none;
+}
+
+    .contact-value:hover {
+        color: var(--azul);
+    }
+
+/* ── Hero interior (páginas internas) ──────────── */
+.inner-hero {
+    border-bottom: 1px solid var(--borde);
+}
+
+.breadcrumb {
+    font-size: .85rem;
+}
+
+.breadcrumb-item a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumb-item.active {
+    color: var(--muted);
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.footer-muddua {
+    background: #0F172A;
+    color: #94A3B8;
+}
+
+.footer-tagline {
+    font-size: .88rem;
+    line-height: 1.7;
+    color: #64748B;
+    max-width: 300px;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .footer-links a {
+        color: #64748B;
+        text-decoration: none;
+        font-size: .88rem;
+        transition: color .2s;
+    }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+    .footer-contact li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: .88rem;
+    }
+
+    .footer-contact a {
+        color: #64748B;
+        text-decoration: none;
+        transition: color .2s;
+    }
+
+        .footer-contact a:hover {
+            color: #fff;
+        }
+
+    .footer-contact span {
+        color: #64748B;
+    }
+
+.footer-social {
+    width: 34px;
+    height: 34px;
+    background: #1E293B;
+    color: #94A3B8;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+    .footer-social:hover {
+        background: var(--azul);
+        color: #fff;
+    }
+
+.footer-divider {
+    border-color: #1E293B;
+}
+
+.footer-copy {
+    color: #475569;
+    font-size: .82rem;
+}
+
+.footer-link-sm {
+    text-decoration: none;
+    transition: color .2s;
+}
+
+    .footer-link-sm:hover {
+        color: #fff;
+    }
+
+/* ── Animaciones fade-in ────────────────────────── */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0 40px;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word; /* Esto ayuda a que el espacio entre palabras sea más natural */
+}

@@ -1,0 +1,159 @@
+﻿@model EmpresaMUDDUA.Models.ContactoViewModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<section class="inner-hero bg-light">
+    <div class="container text-center py-5">
+        <span class="section-tag">HABLEMOS</span>
+        <h1 class="fw-bold mt-2">Contáctanos</h1>
+        <p class="text-muted mt-2">
+            ¿Tienes un proyecto o una pregunta?<br />
+            Estamos a un mensaje de distancia.
+        </p>
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                    <a asp-controller="Home" asp-action="Index">Inicio</a>
+                </li>
+                <li class="breadcrumb-item active">Contacto</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-4 fade-in">
+                <h4 class="fw-bold mb-4">Información de contacto</h4>
+
+                @* Bloque de Éxito (Verde) *@
+                @if (TempData["Exito"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i> @TempData["Exito"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                @* Bloque de Error (Rojo) - ¡ESTE ES NUEVO! *@
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["Error"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                }
+
+                <ul class="contact-info-list">
+                    <li>
+                        <div class="card-icon icon-design" style="width:44px;height:44px;font-size:1.1rem;flex-shrink:0;">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="#" class="contact-value">contacto@muddua.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-icon icon-dev" style="width:44px;height:44px;font-size:1.1rem;flex-shrink:0;">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">WhatsApp</span>
+                            <a href="#" class="contact-value">+52 551 121 0970</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-icon icon-util" style="width:44px;height:44px;font-size:1.1rem;flex-shrink:0;">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Ubicación</span>
+                            <span class="contact-value">Hidalgo, México</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-icon icon-grow" style="width:44px;height:44px;font-size:1.1rem;flex-shrink:0;">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Horario</span>
+                            <span class="contact-value">Lun – Vie, 9:00 – 18:00</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <p class="fw-semibold mt-4 mb-2">Síguenos</p>
+                <div class="d-flex gap-2">
+                    <a href="https://github.com/Gary750/Ring_salud" class="social-icon"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 fade-in">
+                <div class="contact-form-card">
+                    <h4 class="fw-bold mb-1">Envíanos un mensaje</h4>
+                    <p class="text-muted small mb-4">Respondemos en menos de 24 horas en días hábiles.</p>
+
+                    <form asp-controller="Home" asp-action="EnviarContacto" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label asp-for="Nombre" class="form-label fw-semibold small"></label>
+                                <input asp-for="Nombre" class="form-control form-control-muddua"
+                                       placeholder="Tu nombre completo" />
+                                <span asp-validation-for="Nombre" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-semibold small"></label>
+                                <input asp-for="Email" class="form-control form-control-muddua"
+                                       placeholder="correo@ejemplo.com" />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Empresa" class="form-label fw-semibold small"></label>
+                                <input asp-for="Empresa" class="form-control form-control-muddua"
+                                       placeholder="Nombre de tu empresa (opcional)" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Asunto" class="form-label fw-semibold small"></label>
+                                <input asp-for="Asunto" class="form-control form-control-muddua"
+                                       placeholder="¿En qué te podemos ayudar?" />
+                                <span asp-validation-for="Asunto" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="Mensaje" class="form-label fw-semibold small"></label>
+                                <textarea asp-for="Mensaje" class="form-control form-control-muddua"
+                                          rows="5"
+                                          placeholder="Cuéntanos los detalles de tu proyecto..."></textarea>
+                                <span asp-validation-for="Mensaje" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn btn-primary btn-muddua px-5">
+                                    <i class="bi bi-send me-2"></i> Enviar mensaje
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

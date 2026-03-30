@@ -1,8 +1,241 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Empresa MUDDUA</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section class="hero-section container py-5">
+    <div class="row align-items-center g-5">
+
+        <div class="col-lg-6 fade-in">
+            <span class="badge-label">
+                <span class="badge-dot"></span> INNOVACIÓN DIGITAL
+            </span>
+
+            <h1 class="hero-title fw-bold mt-3">
+                Mente, Unión y <span>Diseño</span><br />para el Futuro.
+            </h1>
+
+            <p class="text-muted mt-3">
+                Desarrollamos soluciones de software que transforman negocios.
+                Desde aplicaciones web hasta sistemas empresariales complejos.
+            </p>
+
+            <div class="mt-4 d-flex gap-3 flex-wrap">
+                <a asp-controller="Home" asp-action="Contacto"
+                   class="btn btn-primary btn-muddua">Comenzar Proyecto</a>
+                <a asp-controller="Home" asp-action="Servicios"
+                   class="btn btn-outline-secondary btn-muddua">Ver Servicios</a>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="hero-stats mt-5 d-flex gap-4 flex-wrap">
+                <div class="stat-item">
+                    <span class="stat-num">6+</span>
+                    <span class="stat-lbl">Integrantes</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-lbl">Compromiso</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <span class="stat-num">DyGS</span>
+                    <span class="stat-lbl">Especialización</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 text-center fade-in">
+            <div class="hero-img-wrap">
+                <img src="/img/team/img1.jpg"
+                     class="img-fluid rounded-4 shadow-lg"
+                     alt="Equipo MUDDUA trabajando" />
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ── PILARES ────────────────────────────────────────── -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <span class="section-tag">METODOLOGÍA</span>
+        <h2 class="fw-bold mt-1">Nuestros Pilares</h2>
+        <p class="text-muted mb-5">La base de cómo construimos cada solución.</p>
+
+        <div class="row g-4">
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="card shadow-sm h-100 border-0 p-3 card-design">
+                    <div class="card-icon icon-design mx-auto">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <div class="card-body pt-2">
+                        <h5 class="fw-bold">Mente</h5>
+                        <p class="text-muted small">Pensamiento creativo y analítico para cada reto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="card shadow-sm h-100 border-0 p-3 card-dev">
+                    <div class="card-icon icon-dev mx-auto">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="card-body pt-2">
+                        <h5 class="fw-bold">Unión</h5>
+                        <p class="text-muted small">Un equipo sólido donde cada miembro aporta lo mejor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="card shadow-sm h-100 border-0 p-3 card-util">
+                    <div class="card-icon icon-util mx-auto">
+                        <i class="bi bi-pen-fill"></i>
+                    </div>
+                    <div class="card-body pt-2">
+                        <h5 class="fw-bold">Diseño</h5>
+                        <p class="text-muted small">Interfaces intuitivas centradas en el usuario.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 fade-in">
+                <div class="card shadow-sm h-100 border-0 p-3 card-grow">
+                    <div class="card-icon icon-grow mx-auto">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                    </div>
+                    <div class="card-body pt-2">
+                        <h5 class="fw-bold">Avance</h5>
+                        <p class="text-muted small">Mejora continua e innovación constante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ── SOBRE NOSOTROS (preview) ───────────────────────── -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5 fade-in">
+                <div class="value-image">
+                    <img src="/img/team/img3.jpg"
+                         class="img-fluid rounded-4 shadow"
+                         alt="Equipo en sesión" />
+                </div>
+            </div>
+
+            <div class="col-lg-7 fade-in">
+                <span class="section-tag">QUIÉNES SOMOS</span>
+                <h2 class="fw-bold mt-1 mb-3">Más que código,<br />creamos soluciones.</h2>
+                <p class="text-muted mb-4">
+                    En MUDDUA, somos un equipo de profesionales especializados en Desarrollo y 
+                    Gestión de Software, apasionados por transformar ideas en soluciones de software 
+                    robustas y escalables. Combinamos creatividad, innovación y una sólida base técnica 
+                    para diseñar productos digitales de alta calidad que eliminan barreras y generan un impacto real.
+                </p>
+                <ul class="list-unstyled value-list">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Metodologías Ágiles</li>
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> Evolución y Escalabilidad</li>
+                    <li><i class="bi bi-check-circle-fill text-danger"></i> Seguridad garantizada</li>
+                    <li><i class="bi bi-check-circle-fill text-warning"></i> Evolución y Escalabilidad</li>
+                </ul>
+                <a asp-controller="Home" asp-action="Nosotros"
+                   class="btn btn-primary btn-muddua mt-3">
+                    Conocer más <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ── SERVICIOS (preview 3 tarjetas) ─────────────────── -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-tag">LO QUE HACEMOS</span>
+            <h2 class="fw-bold mt-1">Nuestros Servicios</h2>
+            <p class="text-muted">Soluciones digitales a la medida de cada proyecto.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4 fade-in">
+                <div class="service-card h-100">
+                    <div class="card-icon icon-design"><i class="bi bi-globe2"></i></div>
+                    <h5 class="fw-bold mt-3">Desarrollo Web</h5>
+                    <p class="text-muted small mt-1">Sitios y aplicaciones web modernas, responsivas y de alto rendimiento.</p>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="service-card h-100">
+                    <div class="card-icon icon-dev"><i class="bi bi-phone"></i></div>
+                    <h5 class="fw-bold mt-3">Apps Móviles</h5>
+                    <p class="text-muted small mt-1">Aplicaciones multiplataforma fluidas para iOS y Android.</p>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="service-card h-100">
+                    <div class="card-icon icon-util"><i class="bi bi-database-fill"></i></div>
+                    <h5 class="fw-bold mt-3">Bases De Datos</h5>
+                    <p class="text-muted small mt-1">Diseño y optimización de bases de datos de alto rendimiento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a asp-controller="Home" asp-action="Servicios"
+               class="btn btn-outline-secondary btn-muddua">
+                Ver todos los servicios <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ── TECNOLOGÍAS ────────────────────────────────────── -->
+<section class="py-5">
+    <div class="container text-center">
+        <span class="section-tag">STACK TECNOLÓGICO</span>
+        <h2 class="fw-bold mt-1 mb-2">Tecnologías que dominamos</h2>
+        <p class="text-muted mb-5">Las herramientas con las que construimos soluciones reales.</p>
+
+        <div class="tech-grid">
+            <span class="tech-pill"><i class="bi bi-filetype-html"></i> HTML5</span>
+            <span class="tech-pill"><i class="bi bi-filetype-css"></i> CSS3</span>
+            <span class="tech-pill"><i class="bi bi-filetype-js"></i> JavaScript</span>
+            <span class="tech-pill"><i class="bi bi-filetype-cs"></i> C#</span>
+            <span class="tech-pill"><i class="bi bi-filetype-py"></i> Python</span>
+            <span class="tech-pill"><i class="bi bi-database"></i> SQL Server</span>
+            <span class="tech-pill"><i class="bi bi-phone"></i> Flutter</span>
+            <span class="tech-pill"><i class="bi bi-git"></i> Git / GitHub</span>
+            <span class="tech-pill"><i class="bi bi-microsoft"></i> ASP.NET</span>
+            <span class="tech-pill"><i class="bi bi-database-fill gear"></i> MySQL</span>
+           
+        </div>
+    </div>
+</section>
+
+
+<!-- ── CTA FINAL ──────────────────────────────────────── -->
+<section class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">¿Listo para innovar?</h2>
+        <p class="text-white-50 mt-2">
+            Lleva tu projecto a la innovación digital con MUDDUA.
+        </p>
+        <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+            <a asp-controller="Home" asp-action="Contacto"
+               class="btn btn-primary btn-muddua">
+                <i class="bi bi-envelope me-1"></i> Contáctanos
+            </a>
+            <a asp-controller="Home" asp-action="Servicios"
+               class="btn btn-outline-light btn-muddua">Ver Servicios</a>
+        </div>
+    </div>
+</section>
